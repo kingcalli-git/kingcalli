@@ -87,7 +87,8 @@ export default function EnchantingDateProposalApp() {
     if (!d) return "";
     try {
       return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-    } catch (e) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
       return d.toDateString();
     }
   };
